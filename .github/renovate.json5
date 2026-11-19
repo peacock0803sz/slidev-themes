@@ -1,0 +1,45 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'github>peacock0803sz/renovate-config',
+  ],
+  ignorePaths: [
+    '**/node_modules/**',
+  ],
+  nix: {
+    enabled: true,
+  },
+  lockFileMaintenance: {
+    enabled: true,
+    minimumReleaseAge: null,
+  },
+  packageRules: [
+    {
+      matchManagers: [
+        'nix',
+      ],
+      groupName: 'nix flake inputs',
+      commitMessagePrefix: ':snowflake:',
+      commitMessageAction: 'Update',
+      commitMessageTopic: 'flake.lock',
+      commitMessageExtra: '',
+      group: {
+        commitMessageTopic: 'flake.lock',
+        commitMessageExtra: '',
+      },
+    },
+    {
+      description: 'pnpm lock maintenance uses pnpm-lock.yaml title',
+      matchManagers: [
+        'npm',
+      ],
+      matchUpdateTypes: [
+        'lockFileMaintenance',
+      ],
+      commitMessagePrefix: ':package:',
+      commitMessageAction: 'Update',
+      commitMessageTopic: 'pnpm-lock.yaml',
+      commitMessageExtra: '',
+    },
+  ],
+}
