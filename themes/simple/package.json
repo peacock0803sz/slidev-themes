@@ -1,6 +1,12 @@
 {
   "name": "@peacock0803sz/theme-simple",
   "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peacock0803sz/slidev-themes.git",
+    "directory": "themes/simple"
+  },
   "keywords": [
     "slidev-theme",
     "slidev"
@@ -14,6 +20,10 @@
     "dev": "slidev example.md",
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png"
+  },
+  "publishConfig": {
+    "@peacock0803sz:registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "dependencies": {
     "@slidev/types": "^53.0.0",

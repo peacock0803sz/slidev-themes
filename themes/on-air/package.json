@@ -1,6 +1,12 @@
 {
   "name": "@peacock0803sz/theme-on-air",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peacock0803sz/slidev-themes.git",
+    "directory": "themes/on-air"
+  },
   "keywords": [
     "slidev-theme",
     "slidev"
@@ -14,7 +20,8 @@
     "format": "slidev format example.md"
   },
   "publishConfig": {
-    "@peacock0803sz:registry": "https://npm.pkg.github.com"
+    "@peacock0803sz:registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@slidev/cli": "^53.0.0",

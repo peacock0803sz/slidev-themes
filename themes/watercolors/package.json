@@ -1,12 +1,19 @@
 {
   "name": "@peacock0803sz/theme-watercolors",
-  "version": "1.1.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peacock0803sz/slidev-themes.git",
+    "directory": "themes/watercolors"
+  },
   "engines": {
     "node": ">=24.22.3",
     "slidev": ">=0.19.2"
   },
   "publishConfig": {
-    "@peacock0803sz:registry": "https://npm.pkg.github.com"
+    "@peacock0803sz:registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "slidev": {
     "colorSchema": "light",
