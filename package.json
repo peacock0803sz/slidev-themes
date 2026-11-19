@@ -1,5 +1,6 @@
 {
   "name": "slidev-themes",
+  "private": true,
   "packageManager": "pnpm@10.34.9",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir -p dist",
