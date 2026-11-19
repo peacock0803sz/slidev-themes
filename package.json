@@ -1,0 +1,12 @@
+{
+  "name": "slidev-themes",
+  "packageManager": "pnpm@10.34.9",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir -p dist",
+    "build": "pnpm run --workspace-concurrency 2 -r build"
+  },
+  "devDependencies": {
+    "playwright-chromium": "catalog:",
+    "vite-plugin-radar": "^0.10.0"
+  }
+}
