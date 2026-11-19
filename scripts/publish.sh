@@ -10,7 +10,7 @@ REPO_URL=git+https://github.com/peacock0803sz/slidev-themes.git
 
 usage() {
   echo "usage: bash scripts/publish.sh <version> [--dry-run]" >&2
-  echo "  <version> must be X.Y.Z without a leading v or a pre-release suffix" >&2
+  echo "  <version> must be X.Y.Z without a leading v, leading zeros or a pre-release suffix" >&2
   exit 1
 }
 
@@ -24,7 +24,7 @@ case $# in
     ;;
   *) usage ;;
 esac
-re='^[0-9]+\.[0-9]+\.[0-9]+$'
+re='^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
 [[ $version =~ $re ]] || usage
 
 # npm reads .npmrc from the directory it runs in; staying at the repository
